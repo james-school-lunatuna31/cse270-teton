@@ -1,0 +1,358 @@
+{
+  "id": "e08c7394-fb73-4000-a705-c6bb24018261",
+  "version": "2.0",
+  "name": "CSE-270",
+  "url": "https://james-school-lunatuna31.github.io",
+  "tests": [{
+    "id": "a4500535-760c-4d2f-882e-2c98d451646f",
+    "name": "Site Homepage (1)",
+    "commands": [{
+      "id": "ba8846ca-5a89-4ea1-b102-a9006b0ceec0",
+      "comment": "Navigate to the home page",
+      "command": "open",
+      "target": "https://james-school-lunatuna31.github.io/cse270-teton/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52cd7aea-1ee1-47b0-92f8-bcf0b3a53a1b",
+      "comment": "Verify that the site logo is displayed",
+      "command": "verifyElementPresent",
+      "target": "css=.header-logo img",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46a16640-7c34-4c73-8a99-70925f390639",
+      "comment": "Verify that the website heading \"Teton Idaho Chamber of Commerce\" is displayed",
+      "command": "verifyElementPresent",
+      "target": "css=.header-title",
+      "targets": [
+        ["css=.header-title", "css:finder"],
+        ["xpath=//div[@id='content']/header/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fde03de-2ae0-45a8-8130-f078bc1d6869",
+      "comment": "Verify that the title displayed in the browser tab is \"Teton Idaho CoC\"",
+      "command": "verifyTitle",
+      "target": "Teton Idaho CoC",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e0e673ce-4de3-4e95-9c17-42410bde4f3a",
+    "name": "Site Homepage (2)",
+    "commands": [{
+      "id": "eb0f389d-82dc-4a00-954d-0ab47dac0f65",
+      "comment": "Navigate to the home page",
+      "command": "open",
+      "target": "https://james-school-lunatuna31.github.io/cse270-teton/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfbaffe6-c2b8-4a21-bbee-d79f8c977002",
+      "comment": "Make sure the screen size is big enough to show the full navigation menu",
+      "command": "setWindowSize",
+      "target": "1900x1200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95adaaff-43f8-4cd5-8903-4d7085a5b2bc",
+      "comment": "Verify that two spotlights are present (1/2)",
+      "command": "verifyElementPresent",
+      "target": "css=.spotlight1",
+      "targets": [
+        ["css=.spotlight1", "css:finder"],
+        ["xpath=//div[@id='content']/main/section[5]/div", "xpath:idRelative"],
+        ["xpath=//section[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9d84429-f05d-4770-b6d6-e361df4c269c",
+      "comment": "Verify that two spotlights are present (2/2)",
+      "command": "verifyElementPresent",
+      "target": "css=.spotlight2",
+      "targets": [
+        ["css=.spotlight2", "css:finder"],
+        ["xpath=//div[@id='content']/main/section[5]/div[2]", "xpath:idRelative"],
+        ["xpath=//section[5]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8b294f2-f4f3-49cb-95ec-2be5c82aa888",
+      "comment": "Verify the Join Us link is present ",
+      "command": "verifyElementPresent",
+      "target": "linkText=Join",
+      "targets": [
+        ["linkText=Join", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Join')]", "xpath:link"],
+        ["xpath=//div[@id='content']/header/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'join.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Join')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a647625f-0b05-4947-b1da-33cb37e16558",
+      "comment": "Click Join Link",
+      "command": "click",
+      "target": "linkText=Join",
+      "targets": [
+        ["linkText=Join", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Join')]", "xpath:link"],
+        ["xpath=//div[@id='content']/header/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'join.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Join')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1e58a71-676b-4ed3-9283-dd6ceb15abf9",
+      "comment": "Verify clicking the Join Us link takes you to the join page",
+      "command": "verifyText",
+      "target": "css=section > h3",
+      "targets": [],
+      "value": "Welcome to the Teton Chamber of Commerce Signup Wizard!"
+    }]
+  }, {
+    "id": "dd788e1b-e330-4701-b377-1d9e0d53ab81",
+    "name": "Site Directory Page (3)",
+    "commands": [{
+      "id": "ddd4cc92-82be-42b6-ad91-5df2b201bc6f",
+      "comment": "Navigate to the directory page",
+      "command": "open",
+      "target": "https://james-school-lunatuna31.github.io/cse270-teton/directory.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2972bbf4-ec29-4f4a-8d60-2339278a3e28",
+      "comment": "Click on the \"Grid\" button to display the card view",
+      "command": "click",
+      "target": "id=directory-list",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c705b518-b255-4334-97af-f211c71723b8",
+      "comment": "Make sure that the \"Teton Turf and Tree\" business is shown in the cards",
+      "command": "assertElementPresent",
+      "target": "css=.gold-member:nth-child(9) > p:nth-child(2)",
+      "targets": [
+        ["css=.gold-member:nth-child(9) > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='directory-data']/section[9]/p", "xpath:idRelative"],
+        ["xpath=//section[9]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Teton Turf and Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e72bd62e-43f6-4a87-8b13-e1d8d5a79243",
+      "comment": "Click on the \"List\" button to display the list view",
+      "command": "click",
+      "target": "id=directory-list",
+      "targets": [
+        ["id=directory-list", "id"],
+        ["css=#directory-list", "css:finder"],
+        ["xpath=//button[@id='directory-list']", "xpath:attributes"],
+        ["xpath=//div[@id='directory-selector']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'LIST')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff529fcd-7d29-470a-9a62-a8cca04e0caa",
+      "comment": "Again, make sure that the \"Teton Turf and Tree\" business is displayed in the list",
+      "command": "assertElementPresent",
+      "target": "css=.gold-member:nth-child(9) > p:nth-child(2)",
+      "targets": [
+        ["css=.gold-member:nth-child(9) > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='directory-data']/section[9]/p", "xpath:idRelative"],
+        ["xpath=//section[9]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Teton Turf and Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "13c3ac59-b5e6-4377-bb29-17d6f0702d0b",
+    "name": "Site Join Page (4)",
+    "commands": [{
+      "id": "230778a4-f3d2-41be-a693-d7cf93ea8b25",
+      "comment": "Navigate to the join page",
+      "command": "open",
+      "target": "https://james-school-lunatuna31.github.io/cse270-teton/join.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4f13a03-486f-4c20-ba6a-b93f61716b74",
+      "comment": "Make sure the \"First Name\" input box is present",
+      "command": "assertElementPresent",
+      "target": "name=fname",
+      "targets": [
+        ["name=fname", "name"],
+        ["css=.myinput:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='fname']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17b63d52-c22c-4eec-8bb5-88fca6f5440b",
+      "comment": "Fill in the first page with information of your choosing (first name)",
+      "command": "type",
+      "target": "name=fname",
+      "targets": [
+        ["name=fname", "name"],
+        ["css=.myinput:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='fname']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "James"
+    }, {
+      "id": "8f1f70c6-cb07-40bc-85b3-cf341f62eb73",
+      "comment": "Fill in the first page with information of your choosing (last name)",
+      "command": "type",
+      "target": "name=lname",
+      "targets": [
+        ["name=lname", "name"],
+        ["css=.myinput:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='lname']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "Green"
+    }, {
+      "id": "d6aea802-fc98-484f-b63a-fc39e63d0f09",
+      "comment": "Fill in the first page with information of your choosing (business name)",
+      "command": "type",
+      "target": "name=bizname",
+      "targets": [
+        ["name=bizname", "name"],
+        ["css=.myinput:nth-child(4) > input", "css:finder"],
+        ["xpath=//input[@name='bizname']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "a8169975-7094-42a8-a27d-489e64228232",
+      "comment": "Fill in the first page with information of your choosing (title)",
+      "command": "type",
+      "target": "name=biztitle",
+      "targets": [
+        ["name=biztitle", "name"],
+        ["css=.myinput:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='biztitle']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label[4]/input", "xpath:idRelative"],
+        ["xpath=//label[4]/input", "xpath:position"]
+      ],
+      "value": "CEO"
+    }, {
+      "id": "9525a29a-ae1a-452f-8e13-92aff7c4c954",
+      "comment": "Click the \"Next Step\" button",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53f4590f-f961-46a0-87dd-b0977b2eac84",
+      "comment": "Make sure the \"Email\" input box is present",
+      "command": "assertElementPresent",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.myinput:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9351bfd9-848d-4384-a7a8-1549d1bd6539",
+    "name": "Site Admin Page (5)",
+    "commands": [{
+      "id": "f415c8d6-c33c-46c1-8f1b-25692f101271",
+      "comment": "Navigate to the admin page",
+      "command": "open",
+      "target": "https://james-school-lunatuna31.github.io/cse270-teton/admin.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c66d2c53-08bb-4322-a599-83897958b88a",
+      "comment": "Make sure the \"Username\" input box is present",
+      "command": "assertElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d2120ad-64ff-4148-8033-aaa2539e40e5",
+      "comment": "Fill in an incorrect username",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "incorrect username"
+    }, {
+      "id": "a003ecd4-6342-4e2a-828e-383f39e7fbce",
+      "comment": "and password",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": "incorrect password"
+    }, {
+      "id": "9ef06929-b640-4a39-ae82-e5af73b3767a",
+      "comment": "Click the Login button",
+      "command": "click",
+      "target": "css=.mysubmit:nth-child(4)",
+      "targets": [
+        ["css=.mysubmit:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/input", "xpath:idRelative"],
+        ["xpath=//fieldset/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77e4679a-cc41-4380-934f-8179096cddb3",
+      "comment": "Ensure the appropriate error message is displayed.",
+      "command": "assertElementPresent",
+      "target": "css=.errorMessage",
+      "targets": [
+        ["css=.errorMessage", "css:finder"],
+        ["xpath=//div[@id='content']/main/section/form/div/span", "xpath:idRelative"],
+        ["xpath=//form/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Invalid username and password.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2515bfa7-055f-45a7-80f1-dcb8a3b6427b",
+    "name": "Site Tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a4500535-760c-4d2f-882e-2c98d451646f", "e0e673ce-4de3-4e95-9c17-42410bde4f3a", "dd788e1b-e330-4701-b377-1d9e0d53ab81", "13c3ac59-b5e6-4377-bb29-17d6f0702d0b", "9351bfd9-848d-4384-a7a8-1549d1bd6539"]
+  }],
+  "urls": ["https://james-school-lunatuna31.github.io/"],
+  "plugins": []
+}
